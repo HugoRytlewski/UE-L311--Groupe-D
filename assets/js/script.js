@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class') + ' pause');
         }); // passage sur deux lignes pour plus de lisibilité
 
-        setTimeInterval(function(){
+        setInterval(function(){//setTimeInterval n'existe pas en JavaScript mais plutot setInterval
             if(is_run){
                 let oDate = new Date();
                 document.querySelector('#hours').innerHTML   =  adjustTimer(oDate.getHours());
@@ -29,11 +29,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function adjustTimer(timer){
-        (timer < 10 ? '0'+timer : timer);
+        return(timer < 10 ? '0'+timer : timer);//manque return
     }
 
-    function randomHexColor(x, y){
-        let z= 50 // J'ai ajouté cette ligne pour définir la valeur de z
+    function randomHexColor(x, y, z){ // ajouter z comme paramètre 
+        //let z= 50 // J'ai ajouté cette ligne pour définir la valeur de z
+        //normalement, z est passé en paramètre à l'appel de cette fonction, et sa valeur est "document.querySelector('#seconds').innerHTML".
         return "rgb(" + Math.floor(x/100 * 256) + "," + Math.floor(y/100 * 256) + "," + Math.floor(z/100 * 256) + ")";
     }
 });
