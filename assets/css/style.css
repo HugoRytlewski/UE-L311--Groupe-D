@@ -5,7 +5,7 @@ font-family: "Aldrich", sans-serif;
 font-size: 12px;
 height:100%;
 color: #F0F1D5;
-background-color: transparent; /*transpent au lieu de transparent*/
+background-color: transpent;
 }
 #wrapper{   /*#wrappr au lieu de #wrapper*/
 display:flex;
@@ -13,7 +13,7 @@ justify-content:center;
 align-items:center;
 height: 100%;
 }
-.inside{ /*manque de {*/
+.inside
 font-weight: bold;
 font-size: 75px;;
 }
