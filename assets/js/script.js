@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-    let is_run    = "true";
+    let is_run = true; // J'ai changé "true" en true car c'est une variable bool et non une variable string
 
 
     init();
