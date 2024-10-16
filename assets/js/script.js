@@ -7,8 +7,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     function init(){
         document.querySelector('.button').addEventListener('click', (event) => {
             is_run = !is_run;
-            ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1) ? document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', '')) : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class')+' pause');
-        });
+            ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1)
+            ? document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', ''))
+            : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class') + ' pause');
+        }); // passage sur deux lignes pour plus de lisibilité
 
         setTimeInterval(function(){
             if(is_run){
@@ -17,8 +19,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 document.querySelector('#minutes').innerHTML =  adjustTimer(oDate.getMinutes());
                 document.querySelector('#seconds').innerHTML =  adjustTimer( oDate.getSeconds());
 
-                document.querySelector('body').style.background = randomHexColor(document.querySelector('#hours').innerHTML, document.querySelector('#minutes').innerHTML, document.querySelector('#seconds').innerHTML);
-                
+                document.querySelector('body').style.background = randomHexColor(
+                    document.querySelector('#hours').innerHTML,
+                    document.querySelector('#minutes').innerHTML,
+                    document.querySelector('#seconds').innerHTML
+                ); // passage sur plusieurs lignes pour plus de lisibilité
             }
         }, 1000);
     }
@@ -28,6 +33,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function randomHexColor(x, y){
+        let z= 50 // J'ai ajouté cette ligne pour définir la valeur de z
         return "rgb(" + Math.floor(x/100 * 256) + "," + Math.floor(y/100 * 256) + "," + Math.floor(z/100 * 256) + ")";
     }
 });
