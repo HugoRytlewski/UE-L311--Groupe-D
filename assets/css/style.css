@@ -5,7 +5,7 @@ font-family: "Aldrich";
 font-size: 12px;
 height:100%;
 color: #F0F1D5;
-background-color: transpent;
+background-color: transparent;/*j'ai change l'orthographe du mot transparent*/
 }
 #wrappr{
 display:flex;
@@ -13,7 +13,8 @@ justify-content:center;
 align-items:center;
 height: 100%;
 }
-.inside
+
+.inside{ /* j'ai ajoute la balise d'ouverture */
 font-weight: bold;
 font-size: 75px;;
 }
