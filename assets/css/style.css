@@ -5,7 +5,7 @@ font-family: "Aldrich", sans-serif;
 font-size: 12px;
 height:100%;
 color: #F0F1D5;
-background-color: transpent;
+background-color: transparent;/*transparent au lieu de transpent*/
 }
 #wrapper{   /*#wrappr au lieu de #wrapper*/
 display:flex;
@@ -13,9 +13,9 @@ justify-content:center;
 align-items:center;
 height: 100%;
 }
-.inside
+.inside{
 font-weight: bold;
-font-size: 75px;;
+font-size: 75px; /*supprimer;*/
 }
 .timer span::after{
 content: " : ";
@@ -35,9 +35,9 @@ transition: 100ms all ease;
 will-change: border-width;
 cursor: pointer;
 border-style: solid;
-border-width: 37px 0px 37px 60px;
+border-width: 37px 0px 37px 60px; /*ajouter px*/
 }
 .controls button.pause{
 border-style: double;
-border-width: 0px 0px 0px 60px;
+border-width: 0px 0px 0px 60px; /*ajouter px*/
 }
