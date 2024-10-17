@@ -5,7 +5,7 @@ font-family: "Aldrich", sans-serif;
 font-size: 12px;
 height:100%;
 color: #F0F1D5;
-background-color: transparent;/*transparent au lieu de transpent*/
+background-color: #238071;/* correction de couleur*/
 }
 #wrapper{   /*#wrappr au lieu de #wrapper*/
 display:flex;
